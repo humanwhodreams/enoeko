@@ -25,7 +25,7 @@ export function Home() {
             </Link>
             <Link
               href={"#"}
-              className={cn(buttonVariants({ variant: "ghost", className: "hover:underline" }))}
+              className={cn(buttonVariants({ variant: "outline", className: "hover:underline" }))}
             >
               Are you a business? Join us
             </Link>
