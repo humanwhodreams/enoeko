@@ -24,7 +24,7 @@ export default function RootLayout({
         <body className={cn("antialiased relative", inter.className)}>
           <Providers>
             <div className="absolute top-0 w-full h-full bg-background -z-10">
-              <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-primary/20 dark:bg-primary opacity-50 blur-[80px]"></div>
+              <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-primary/10 opacity-50 blur-[80px]"></div>
             </div>
             {children}
           </Providers>

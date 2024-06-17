@@ -10,7 +10,7 @@ export function Services() {
           {services.map((service) => (
             <a
               key={service.href}
-              className="flex flex-col justify-center p-4 group hover:bg-muted rounded-xl md:p-7"
+              className="flex flex-col justify-center p-4 group hover:bg-muted/20 rounded-xl md:p-7"
               href={service.href}
             >
               <div className="flex items-center justify-center bg-primary size-12 rounded-xl">
@@ -23,7 +23,7 @@ export function Services() {
                 <p className="mt-1 text-muted-foreground">
                   {service.description}{" "}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 group-hover:underline font-medium">
+                <span className="mt-2 inline-flex items-center gap-x-1.5 text-sm text-primary decoration-2 group-hover:underline font-medium">
                   Learn more
                   <ChevronRightCircle className="flex-shrink-0 size-4" />
                 </span>
@@ -32,7 +32,7 @@ export function Services() {
           ))}
 
           <a
-            className="p-4 rounded-xl md:p-7 hover:bg-muted"
+            className="p-4 rounded-xl md:p-7 hover:bg-muted/20"
             href="/services"
           >
             <div>
