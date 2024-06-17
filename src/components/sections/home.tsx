@@ -48,10 +48,10 @@ function Alert({
       href={href}
       className="inline-flex items-center px-3 py-1 mb-8 text-sm font-medium border rounded-lg bg-muted hover:bg-muted/80 dark:border-none"
     >
-      <Bell className="w-4 h-4" />{" "}
-      <Separator className="h-4 mx-2" orientation="vertical" />{" "}
-      <span>{children}</span>
-      <ArrowRightIcon className="w-4 h-4 ml-1" />
+      <Bell className="flex-shrink-0 w-4 h-4" />{" "}
+      <Separator className="h-4 mx-2 bg-muted-foreground" orientation="vertical" />{" "}
+      <span className="line-clamp-1">{children}</span>
+      <ArrowRightIcon className="flex-shrink-0 w-4 h-4 ml-1" />
     </Link>
   );
 }

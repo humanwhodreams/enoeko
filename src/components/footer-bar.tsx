@@ -21,7 +21,7 @@ export function FooterBar() {
               <ul className="text-muted-foreground">
                 {services.map((service) => (
                   <li className="mb-4" key={service.title}>
-                    <Link href={service.href} className="hover:text-primary">
+                    <Link href={service.href} className="text-sm hover:text-primary">
                       {service.title.replace("service", "")}
                     </Link>
                   </li>
@@ -37,7 +37,7 @@ export function FooterBar() {
                   <li className="mb-4" key={social.title}>
                     <a
                       href={social.href}
-                      className="hover:text-primary"
+                      className="text-sm hover:text-primary"
                       rel="noreferrer noopener"
                       target="_blank"
                     >
@@ -51,7 +51,7 @@ export function FooterBar() {
               <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="text-sm hover:underline">
                     Privacy Policy
                   </a>
                 </li>
@@ -77,7 +77,7 @@ export function FooterBar() {
             {socials.map((social) => (
               <a
                 key={social.title}
-                className="text-muted hover:text-gray-900 dark:hover:text-primary"
+                className="text-muted-foreground hover:text-primary"
                 href={social.href}
                 rel="noreferrer noopener"
                 target="_blank"
