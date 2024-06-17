@@ -1,18 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { ThemeDropdownMenu } from "@/components/theme/theme-dropdown-menu";
+import { Features } from "@/components/sections/features";
+import { Home } from "@/components/sections/home";
+import { Services } from "@/components/sections/services";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main>
-      <section className="p-4">
-        <div className="space-y-4">
-          <h1>Welcome to Enoeko</h1>
-          <div>
-            <Button>Sign Up</Button>
-          </div>
-          <ThemeDropdownMenu />
-        </div>
-      </section>
-    </main>
+    <>
+      <Home />
+      <Services />
+      <Features />
+    </>
   );
 }
