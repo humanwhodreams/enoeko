@@ -5,4 +5,5 @@ export type service = {
   href: string;
   icon: LucideIcon
   description: string
+  available: boolean
 }
