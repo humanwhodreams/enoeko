@@ -1,10 +1,9 @@
-import ServiceHome from '@/components/sections/serviceHome'
-import React from 'react'
+import { Home } from "@/components/sections/services/home";
 
 export default function Page() {
   return (
     <>
-    <ServiceHome />
+      <Home />
     </>
-  )
+  );
 }

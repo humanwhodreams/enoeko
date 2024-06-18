@@ -9,3 +9,17 @@ export type business = {
   };
   category: string;
 };
+
+export type _business = {
+  image: string;
+  name: string;
+  description: string,
+  shipping: {
+    address: string;
+    contact: {
+      email: string;
+      phone: string;
+    };
+  };
+  category: string;
+};

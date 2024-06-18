@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import Providers from "@/components/providers";
+import { TailwindIndicator } from "@/components/tailwindcss-indicator";
 import { cn } from "@/lib/utils";
 import { inter_local } from "@/styles/fonts";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
               <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-primary/10 opacity-50 blur-[80px]"></div>
             </div>
             {children}
+            <TailwindIndicator />
           </Providers>
         </body>
       </html>
