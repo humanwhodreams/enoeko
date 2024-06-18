@@ -1,9 +1,9 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 import { Brand } from "./brand";
+import { CUserButton } from "./custom-user-button";
 import Link from "next/link";
 import { ThemeDropdownMenu } from "./theme/theme-dropdown-menu";
-import { UserButton } from "./user-button";
 import { buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +33,7 @@ export function NavigationBar() {
             </div>
           </SignedOut>
           <SignedIn>
-            <UserButton />
+            <CUserButton />
           </SignedIn>
         </div>
       </div>
