@@ -80,6 +80,7 @@ export function CUserButton() {
         <div className="grid grid-cols-1 p-1">
           {useritems.map((item) => (
             <Button
+              key={item.href}
               type="button"
               variant={"ghost"}
               size={"sm"}
@@ -98,7 +99,7 @@ export function CUserButton() {
           <div className="flex w-full items-center justify-start px-3">
             <span className="text-sm font-medium">Theme</span>
             <div className="ml-auto">
-              <ThemeSelect twWidth="w-[80px]" align="end"/>
+              <ThemeSelect twWidth="w-[80px]" align="end" />
             </div>
           </div>
         </div>
