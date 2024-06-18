@@ -1,4 +1,4 @@
-import { ChevronRight, ChevronRightCircle, Home } from "lucide-react";
+import { ChevronRightCircle } from "lucide-react";
 
 import { services } from "@/constants/services";
 
@@ -7,7 +7,7 @@ export function Services() {
     <section>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="grid items-start gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {services.slice(0,3).map((service) => (
             <a
               key={service.href}
               className="flex flex-col justify-center p-4 group hover:bg-muted/20 rounded-xl md:p-7"
