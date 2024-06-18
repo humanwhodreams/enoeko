@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 
 import {
   Select,
@@ -8,17 +8,23 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 
-export function ThemeSelect() {
+interface Props {
+  twWidth?: string;
+  align?: "start" | "center" | "end";
+}
+
+export function ThemeSelect({ twWidth, align = "center" }: Props) {
   const { theme, setTheme } = useTheme();
 
   return (
     <Select onValueChange={(value) => setTheme(value)}>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className={cn("w-[180px]", twWidth)}>
         <SelectValue placeholder={theme} />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent align={align}>
         <SelectItem value="light">Light</SelectItem>
         <SelectItem value="dark">Dark</SelectItem>
         <SelectItem value="system">System</SelectItem>

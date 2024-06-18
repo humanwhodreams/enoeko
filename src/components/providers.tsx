@@ -4,14 +4,18 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 interface ProvidersProps {
   children: React.ReactNode;
+  mode?: "light" | "dark" | "system";
 }
 
-export default function Providers({ children }: ProvidersProps) {
+export default function Providers({
+  children,
+  mode = "system",
+}: ProvidersProps) {
   return (
     <>
       <ThemeProvider
         attribute="class"
-        defaultTheme="light"
+        defaultTheme={mode}
         enableSystem
         disableTransitionOnChange
       >

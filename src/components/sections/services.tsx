@@ -10,7 +10,7 @@ export function Services() {
           {services.map((service) => (
             <a
               key={service.href}
-              className="flex flex-col justify-center p-4 group hover:bg-muted/20 rounded-xl md:p-7"
+              className="flex flex-col justify-center p-4 group hover:bg-muted/70 dark:hover:bg-muted/20 rounded-xl md:p-7"
               href={service.href}
             >
               <div className="flex items-center justify-center bg-primary size-12 rounded-xl">
@@ -32,7 +32,7 @@ export function Services() {
           ))}
 
           <a
-            className="p-4 rounded-xl md:p-7 hover:bg-muted/20"
+            className="p-4 rounded-xl md:p-7 hover:bg-muted/70 dark:hover:bg-muted/20"
             href="/services"
           >
             <div>
