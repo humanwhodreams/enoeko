@@ -23,6 +23,7 @@ export default function Page() {
               image={business.image}
               name={business.name}
               address={business.address}
+              key={index}
             />
           ))}
         </div>
