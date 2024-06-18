@@ -5,8 +5,8 @@ export function Services() {
   return (
     <section>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="grid items-start gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 3).map((service) => (
+        <div className="grid items-start gap-2 sm:grid-cols-2 lg:grid-cols-3 ">
+          {services.map((service) => (
             <a
               key={service.href}
               className="flex flex-col justify-center p-4 group hover:bg-muted/70 dark:hover:bg-muted/20 rounded-xl md:p-7"
@@ -20,7 +20,7 @@ export function Services() {
                   {service.title}
                 </h3>
                 <p className="mt-1 text-muted-foreground">
-                  {service.description}
+                  {service.description}{" "}
                 </p>
                 {service.available === true ? (
                   <span className="mt-2 inline-flex items-center gap-x-1.5 text-sm text-primary decoration-2 group-hover:underline font-medium">
@@ -36,21 +36,6 @@ export function Services() {
               </div>
             </a>
           ))}
-
-          <a
-            className="p-4 rounded-xl md:p-7 hover:bg-muted/70 dark:hover:bg-muted/20"
-            href="/services"
-          >
-            <div>
-              <h3 className="text-lg font-semibold flex items-center gap-x-1.5">
-                See more services{" "}
-                <ChevronRightCircle className="flex-shrink-0 size-4" />
-              </h3>
-              <p className="mt-1 text-muted-foreground">
-                More services offered by Enoeko
-              </p>
-            </div>
-          </a>
         </div>
       </div>
     </section>

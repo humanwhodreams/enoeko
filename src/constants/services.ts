@@ -1,4 +1,4 @@
-import { Droplets, Fuel, Truck, Bolt, Recycle } from "lucide-react";
+import { Bolt, Droplets, Fuel, Recycle, Truck } from "lucide-react";
 
 import type { service } from "@/types/service";
 
@@ -21,8 +21,8 @@ export const services: service[] = [
   },
   {
     title: "Car Wash service",
-    href: "/services/car-wash",
-    available: true,
+    href: "/services",
+    available: false,
     icon: Droplets,
     description:
       "Experience the convenience of a spotless car without leaving home! Our mobile car wash service is fast, professional, and eco-friendly. Book now for a gleaming shine, right at your doorstep.",
@@ -34,9 +34,8 @@ export const services: service[] = [
     icon: Bolt,
     description:
       "Experience the convenience of a spotless car without leaving home! Our mobile car wash service is fast, professional, and eco-friendly. Book now for a gleaming shine, right at your doorstep.",
-      
   },
-  
+
   {
     title: "CNG Conversion service",
     href: "/services",
