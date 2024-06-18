@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export function NavigationBar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <div className="flex items-center justify-between max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-0">
+      <div className="flex items-center justify-between max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8">
         <Link href={"/"}>
           <Brand />
         </Link>

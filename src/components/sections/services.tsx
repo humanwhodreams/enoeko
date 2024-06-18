@@ -1,5 +1,4 @@
 import { ChevronRightCircle } from "lucide-react";
-
 import { services } from "@/constants/services";
 
 export function Services() {
@@ -21,7 +20,7 @@ export function Services() {
                   {service.title}
                 </h3>
                 <p className="mt-1 text-muted-foreground">
-                  {service.description}{" "}
+                  {service.description}
                 </p>
                 <span className="mt-2 inline-flex items-center gap-x-1.5 text-sm text-primary decoration-2 group-hover:underline font-medium">
                   Learn more

@@ -1,6 +1,6 @@
 import type { business } from "@/types/business";
 
-export const Businesses: business[] = [
+export const businesses: business[] = [
   {
     image: "https://ik.imagekit.io/lllriuc3k/BusinessEnoEko/cookingGas.jpeg?updatedAt=1718709180020",
     name: "Cogept Gas services",
