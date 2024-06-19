@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 import { useTheme } from "next-themes";
 
 export function ThemeToggleGroup() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
     <div className="relative flex items-center justify-center border rounded-md w-fit">
@@ -15,6 +15,7 @@ export function ThemeToggleGroup() {
         size={"sm"}
         variant={"ghost"}
         onClick={() => setTheme("light")}
+        title={"Light mode"}
       >
         <Sun className="w-4 h-4" />
         <span className="sr-only">light mode</span>
@@ -24,6 +25,7 @@ export function ThemeToggleGroup() {
         size={"sm"}
         variant={"ghost"}
         onClick={() => setTheme("dark")}
+        title={"Dark mode"}
       >
         <Moon className="w-4 h-4" />
         <span className="sr-only">dark mode</span>
@@ -33,6 +35,7 @@ export function ThemeToggleGroup() {
         size={"sm"}
         variant={"ghost"}
         onClick={() => setTheme("system")}
+        title={"System mode"}
       >
         <Monitor className="w-4 h-4" />
         <span className="sr-only">system mode</span>
