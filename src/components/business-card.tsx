@@ -77,7 +77,7 @@ interface CTAProps
 export function CTA({ href, name, description, className }: CTAProps) {
   return (
     <Button type="button" variant={"default"} className={cn(className)} asChild>
-      <Link href={`${href}?n=${name}&d=${description}`}>
+      <Link href={href}>
         Place order
         <ShoppingCart className="flex-shrink-0 ml-2 size-4" />
       </Link>

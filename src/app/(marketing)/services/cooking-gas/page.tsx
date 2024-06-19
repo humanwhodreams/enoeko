@@ -44,7 +44,7 @@ export default function Page() {
                   <Business.CTA
                     name={bns.name}
                     description={bns.description}
-                    href="#"
+                    href="/services/business-detail"
                   />
                 </div>
               </Business.Footer>
