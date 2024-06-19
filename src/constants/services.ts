@@ -20,7 +20,7 @@ export const services: service[] = [
       "Fast, reliable gas delivery to your doorstep! Available 24/7, ensuring you never run out. Affordable, convenient, and safe. Order now for a hassle-free experience. Fuel up without the wait!",
   },
   {
-    title: "Water Dispensing Service",
+    title: "Water Delivering Service",
     href: "/services",
     available: true,
     icon: Droplets,
