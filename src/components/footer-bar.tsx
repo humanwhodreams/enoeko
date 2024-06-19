@@ -51,12 +51,12 @@ export function FooterBar() {
               <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a href="#" className="text-sm hover:underline">
+                  <a href="#" className="text-sm hover:text-primary">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="text-sm hover:text-primary">
                     Terms &amp; Conditions
                   </a>
                 </li>
