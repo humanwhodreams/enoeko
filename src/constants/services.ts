@@ -20,12 +20,12 @@ export const services: service[] = [
       "Fast, reliable gas delivery to your doorstep! Available 24/7, ensuring you never run out. Affordable, convenient, and safe. Order now for a hassle-free experience. Fuel up without the wait!",
   },
   {
-    title: "Car Wash service",
+    title: "Water Dispensing Service",
     href: "/services",
-    available: false,
+    available: true,
     icon: Droplets,
     description:
-      "Experience the convenience of a spotless car without leaving home! Our mobile car wash service is fast, professional, and eco-friendly. Book now for a gleaming shine, right at your doorstep.",
+      "Enjoy the convenience of clean, fresh water delivered right to your doorstep!  We offer fast, reliable, and eco-friendly services. Order now for an easy solution to all your hydration needs, ensuring pure and refreshing water for your home or office",
   },
   {
     title: "Automobile Consulting service",
