@@ -5,8 +5,11 @@ export function Services() {
   return (
     <section>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <h2 className="py-2 mb-2 text-2xl font-semibold tracking-tight text-center border-y lg:-translate-x-10 sm:px-6 md:text-3xl first:mt-0 lg:mx-14">
+          ✨ Popular services
+        </h2>
         <div className="grid items-start gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 3).map((service) => (
+          {services.slice(0, 2).map((service) => (
             <a
               key={service.href}
               className="flex flex-col justify-center p-4 group hover:bg-muted/70 dark:hover:bg-muted/20 rounded-xl md:p-7"
@@ -47,7 +50,7 @@ export function Services() {
                 <ChevronRightCircle className="flex-shrink-0 size-4" />
               </h3>
               <p className="mt-1 text-muted-foreground">
-                More services offered by Enoeko
+                More services offered at Enoeko
               </p>
             </div>
           </a>

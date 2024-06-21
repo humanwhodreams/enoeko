@@ -24,7 +24,7 @@ interface Props {
 }
 
 export function Business({ children, className }: Props) {
-  return <Card className={cn("hover:shadow-md", className)}>{children}</Card>;
+  return <Card className={cn("border-none", className)}>{children}</Card>;
 }
 
 export function Header({ children, className }: Props) {

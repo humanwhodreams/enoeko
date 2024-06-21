@@ -5,7 +5,7 @@ export function Home() {
   return (
     <section>
       <div className="relative z-10 max-w-screen-xl px-4 py-8 mx-auto lg:py-16">
-        <PageHeader>Service we offer!</PageHeader>
+        <PageHeader>Services we offer!</PageHeader>
         <PageDescription>
           Our expert mobile team provides fast, reliable, affordable solutions
           for your utility needs. We&apos;re just a click away. Trust us to make

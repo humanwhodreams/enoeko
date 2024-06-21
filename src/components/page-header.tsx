@@ -20,3 +20,31 @@ export function PageHeader({ children, className }: Props) {
     </h1>
   );
 }
+
+function Left({ children, className }: Props) {
+  return (
+    <h1
+      className={cn(
+        "mb-3 text-3xl font-bold leading-none tracking-tight text-left md:text-4xl lg:text-5xl",
+        className
+      )}
+    >
+      {children}
+    </h1>
+  );
+}
+PageHeader.Left = Left;
+
+function Right({ children, className }: Props) {
+  return (
+    <h1
+      className={cn(
+        "mb-3 text-3xl font-bold leading-none tracking-tight text-right md:text-4xl lg:text-5xl",
+        className
+      )}
+    >
+      {children}
+    </h1>
+  );
+}
+PageHeader.Right = Right;

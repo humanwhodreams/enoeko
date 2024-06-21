@@ -11,7 +11,7 @@ export default function MarketingLayout({
   return (
     <main className="flex flex-col items-center justify-between min-h-screen">
       <NavigationBar />
-      <section className="flex-1">{children}</section>
+      <section className="flex-1 w-full">{children}</section>
       <FooterBar />
     </main>
   );

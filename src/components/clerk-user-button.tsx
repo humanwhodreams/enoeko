@@ -2,8 +2,6 @@
 
 import * as React from "react";
 
-import { Headset, Home, Notebook } from "lucide-react";
-
 import { UserButton } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { useTheme } from "next-themes";
@@ -25,22 +23,6 @@ export function ClerkUserButton() {
       appearance={_appearance}
       userProfileProps={{ appearance: _appearance }}
       afterSignOutUrl="/"
-    >
-      <UserButton.UserProfilePage
-        label="Terms"
-        labelIcon={<Notebook />}
-        url="terms"
-      >
-        <div>
-          <h1>Custom Terms Page</h1>
-          <p>This is the custom terms page</p>
-        </div>
-      </UserButton.UserProfilePage>
-      <UserButton.UserProfileLink
-        label="Go to Home"
-        url="/"
-        labelIcon={<Home className="size-4" />}
-      />
-    </UserButton>
+    />
   );
 }

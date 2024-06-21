@@ -1,13 +1,4 @@
-"use client";
-
-import {
-  ArrowUpRight,
-  Headset,
-  Loader2,
-  LogOut,
-  ShoppingBag,
-} from "lucide-react";
-import { ClerkLoaded, ClerkLoading, SignOutButton } from "@clerk/nextjs";
+import { ArrowUpRight, Headset, LogOut, ShoppingBag } from "lucide-react";
 import {
   Popover,
   PopoverContent,
@@ -17,16 +8,15 @@ import {
 import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Skeleton } from "@/components/ui/skeleton";
-import { ThemeSelect } from "./theme/theme-select";
+import { SignOutButton } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
+import { currentUser } from "@clerk/nextjs/server";
 import { focusRing } from "./utils/focus-ring";
-import { useUser } from "@clerk/nextjs";
 
 const useritems = [
   {
-    title: "Account settings",
-    href: "/account/user-profile",
+    title: "Account manager",
+    href: "/account/profile",
     icon: ArrowUpRight,
   },
   {
@@ -37,17 +27,13 @@ const useritems = [
 ];
 
 /**
- * UserButton Component
+ * CUserButton Component
  *
- * @description A theme version of the Clerk <UserButton /> component wrapped around a popover by shadcn/ui
+ * @description A theme version of the Clerk <UserButton /> component wrapped around eneko custom popover by shadcn/ui
  *
  */
-export function UserButton() {
-  const { isLoaded, user } = useUser();
-
-  if (!isLoaded) {
-    return <Skeleton className="w-7 h-[28px] rounded-full" />;
-  }
+export async function UserButton() {
+  const user = await currentUser();
 
   return (
     <Popover>
@@ -60,17 +46,17 @@ export function UserButton() {
         <Image
           src={`${user?.imageUrl!}`}
           alt={`${user?.fullName} profile image`}
-          width={28}
-          height={28}
+          width={32}
+          height={32}
           className="rounded-full"
         />
       </PopoverTrigger>
       <PopoverContent
-        className="px-0 w-56 py-1 flex flex-col gap-y-2"
+        className="flex flex-col w-56 px-0 py-1 gap-y-2"
         align="end"
       >
         <div className="p-4 py-2">
-          <div className="font-semibold text-sm">{user?.firstName}</div>
+          <div className="text-sm font-semibold">{user?.firstName}</div>
           <div className="text-sm">
             {user?.primaryEmailAddress?.emailAddress}
           </div>
@@ -83,7 +69,7 @@ export function UserButton() {
               type="button"
               variant={"ghost"}
               size={"sm"}
-              className="w-full justify-start"
+              className="justify-start w-full"
               asChild
             >
               <Link href={item.href}>
@@ -93,22 +79,14 @@ export function UserButton() {
             </Button>
           ))}
         </div>
-        <hr className="border-border" />
-        <div className="grid grid-cols-1 p-1">
-          <div className="flex w-full items-center justify-start px-3">
-            <span className="text-sm font-medium">Theme</span>
-            <div className="ml-auto">
-              <ThemeSelect twWidth="w-[80px]" align="end" />
-            </div>
-          </div>
-        </div>
+
         <hr className="border-border" />
         <div className="grid grid-cols-1 p-1">
           <Button
             type="button"
             variant={"ghost"}
             size={"sm"}
-            className="w-full justify-start"
+            className="justify-start w-full"
           >
             Customer care
             <Headset className="ml-auto size-4 text-muted-foreground" />
@@ -116,20 +94,15 @@ export function UserButton() {
         </div>
         <hr className="border-border" />
         <div className="grid grid-cols-1 p-1">
-          <SignOutButton>
+          <SignOutButton redirectUrl="/">
             <Button
               type="button"
               variant={"ghost"}
               size={"sm"}
-              className="w-full justify-start"
+              className="justify-start w-full"
             >
               Sign Out
-              <ClerkLoading>
-                <Loader2 className="ml-auto size-4 text-muted-foreground" />
-              </ClerkLoading>
-              <ClerkLoaded>
-                <LogOut className="ml-auto size-4 text-muted-foreground" />
-              </ClerkLoaded>
+              <LogOut className="ml-auto size-4 text-muted-foreground" />
             </Button>
           </SignOutButton>
         </div>
