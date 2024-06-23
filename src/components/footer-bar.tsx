@@ -1,3 +1,4 @@
+import { Brand } from "./brand";
 import Link from "next/link";
 import { services } from "@/constants/services";
 import { socials } from "@/constants/socials";
@@ -5,14 +6,12 @@ import { socials } from "@/constants/socials";
 export function FooterBar() {
   return (
     <footer className="w-full p-4 border-t sm:p-6">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto sm:px-4">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center">
               {/* TODO Add logo mark */}
-              <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                enoeko
-              </span>
+              <Brand />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -21,7 +20,10 @@ export function FooterBar() {
               <ul className="text-muted-foreground">
                 {services.map((service) => (
                   <li className="mb-4" key={service.title}>
-                    <Link href={service.href} className="text-sm hover:text-primary">
+                    <Link
+                      href={service.href}
+                      className="text-sm hover:text-primary"
+                    >
                       {service.title.replace("service", "")}
                     </Link>
                   </li>
@@ -51,12 +53,12 @@ export function FooterBar() {
               <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
               <ul className="text-muted-foreground">
                 <li className="mb-4">
-                  <a href="#" className="text-sm hover:underline">
+                  <a href="#" className="text-sm hover:text-primary">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="text-sm hover:text-primary">
                     Terms &amp; Conditions
                   </a>
                 </li>

@@ -1,9 +1,9 @@
 import type { business } from "@/types/business";
 
-export const Businesses: business[] = [
+export const businesses: business[] = [
   {
     image: "https://ik.imagekit.io/lllriuc3k/BusinessEnoEko/cookingGas.jpeg?updatedAt=1718709180020",
-    name: "Cogept Gas services",
+    name: "Sir Peters & Micheals Okechi Gas Refilling",
     address: "Along pyakassa road, Lugbe, Abuja",
     description: "Cogent is dedicated to providing clean and natual gas for your daily utilitiy services",
     contact: {

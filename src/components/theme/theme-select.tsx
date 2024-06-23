@@ -21,7 +21,7 @@ export function ThemeSelect({ twWidth, align = "center" }: Props) {
 
   return (
     <Select onValueChange={(value) => setTheme(value)}>
-      <SelectTrigger className={cn("w-[180px]", twWidth)}>
+      <SelectTrigger className={cn("w-[180px]", twWidth)} tabIndex={-1}>
         <SelectValue placeholder={theme} />
       </SelectTrigger>
       <SelectContent align={align}>
